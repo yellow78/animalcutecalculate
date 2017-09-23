@@ -1,0 +1,390 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/compute1"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context="com.animal.cutecalculate.MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/toplayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp" >
+
+        <ImageButton
+            android:id="@+id/imagebtnstore"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:onClick="storeclick"
+            android:scaleType="centerInside"
+            android:src="@drawable/menu" />
+
+        <ImageButton
+            android:id="@+id/imagebtnshop"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:onClick="shopclick"
+            android:scaleType="centerInside"
+            android:src="@drawable/shop" />
+
+        <ImageButton
+            android:id="@+id/imagebtnfree"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:onClick="freeclick"
+            android:scaleType="centerInside"
+            android:src="@drawable/free" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_margin="2dp"
+                android:background="@null"
+                android:scaleType="centerInside"
+                android:src="@drawable/point" />
+
+            <TextView
+                android:id="@+id/textcoin"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="20dp"
+                android:background="#82ffffff"
+                android:gravity="center_vertical|left"
+                android:text="9999"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/piclayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toplayout" >
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/sheep" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewrecord"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/piclayout"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textviewstyle1"
+        android:gravity="center_vertical|right"
+        android:paddingRight="10dp"
+        android:text="0"
+        android:textSize="25dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutspace"
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewrecord"
+        android:layout_marginLeft="50dp"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/textViewresult"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/layoutspace"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/textviewstyle1"
+        android:gravity="center_vertical|right"
+        android:paddingRight="10dp"
+        android:text="0"
+        android:textSize="25dp" />
+
+    <LinearLayout
+        android:id="@+id/layoutspace2"
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewresult"
+        android:layout_marginLeft="50dp"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/layoutspace2"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <ImageButton
+                android:id="@+id/btnclear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:onClick="clearclick"
+                android:scaleType="centerInside"
+                android:src="@drawable/math11" />
+
+            <ImageButton
+                android:id="@+id/btndel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:onClick="delclick"
+                android:scaleType="centerInside"
+                android:src="@drawable/math12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <ImageButton
+                android:id="@+id/btnseven"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:onClick="sevenclick"
+                android:scaleType="centerInside"
+                android:src="@drawable/math7" />
+
+            <ImageButton
+                android:id="@+id/btneight"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:onClick="eightclick"
+                android:scaleType="centerInside"
+                android:src="@drawable/math8" />
+
+            <ImageButton
+                android:id="@+id/btnnine"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:onClick="nineclick"
+                android:scaleType="centerInside"
+                android:src="@drawable/math9" />
+
+            <ImageButton
+                android:id="@+id/btndivision"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:onClick="divisionclick"
+                android:scaleType="centerInside"
+                android:src="@drawable/cal4" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <ImageButton
+                android:id="@+id/btnfour"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:onClick="fourclick"
+                android:scaleType="centerInside"
+                android:src="@drawable/math4" />
+
+            <ImageButton
+                android:id="@+id/btnfive"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:onClick="fiveclick"
+                android:scaleType="centerInside"
+                android:src="@drawable/math5" />
+
+            <ImageButton
+                android:id="@+id/btnsix"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:onClick="sixclick"
+                android:scaleType="centerInside"
+                android:src="@drawable/math6" />
+
+            <ImageButton
+                android:id="@+id/btnmultiply"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:onClick="multiplyclick"
+                android:scaleType="centerInside"
+                android:src="@drawable/cal3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <ImageButton
+                android:id="@+id/btnone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:onClick="oneclick"
+                android:scaleType="centerInside"
+                android:src="@drawable/math1" />
+
+            <ImageButton
+                android:id="@+id/btntwo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:onClick="twoclick"
+                android:scaleType="centerInside"
+                android:src="@drawable/math2" />
+
+            <ImageButton
+                android:id="@+id/btnthree"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:onClick="threeclick"
+                android:scaleType="centerInside"
+                android:src="@drawable/math3" />
+
+            <ImageButton
+                android:id="@+id/btnsubtraction"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:onClick="subtractionclick"
+                android:scaleType="centerInside"
+                android:src="@drawable/cal2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <ImageButton
+                android:id="@+id/btnzero"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:onClick="zeroclick"
+                android:scaleType="centerInside"
+                android:src="@drawable/math0" />
+
+            <ImageButton
+                android:id="@+id/btndecimalpoint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:onClick="decimalpointclick"
+                android:scaleType="centerInside"
+                android:src="@drawable/math10" />
+
+            <ImageButton
+                android:id="@+id/btnequal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:onClick="equalclick"
+                android:scaleType="centerInside"
+                android:src="@drawable/math13" />
+
+            <ImageButton
+                android:id="@+id/btnaddition"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:onClick="additionclick"
+                android:scaleType="centerInside"
+                android:src="@drawable/cal1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+    </LinearLayout>
+
+</RelativeLayout>
